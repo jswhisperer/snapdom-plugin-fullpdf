@@ -1,0 +1,37 @@
+{
+  "name": "snapdom-plugin-template",
+  "version": "1.0.0",
+  "description": "A starter template for building SnapDOM plugins",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "keywords": [
+    "snapdom",
+    "snapdom-plugin",
+    "dom-capture",
+    "plugin-template"
+  ],
+  "author": "Juan Martin Muda",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zumerlab/snapdom.git",
+    "directory": "packages/plugin-template"
+  },
+  "bugs": {
+    "url": "https://github.com/zumerlab/snapdom/issues"
+  },
+  "homepage": "https://zumerlab.github.io/snapdom/",
+  "peerDependencies": {
+    "@zumer/snapdom": ">=2.7.0"
+  },
+  "dependencies": {
+    "html2pdf.js": "^0.14.0"
+  }
+}
