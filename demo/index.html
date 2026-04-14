@@ -10,7 +10,7 @@
         "imports": {
           "@zumer/snapdom": "https://esm.sh/@zumer/snapdom@2.8.0",
           "html2pdf.js": "https://esm.sh/html2pdf.js@0.14.0?bundle",
-          "snapdom-realpdf-plugin": "../index.js"
+          "snapdom-html2pdf-plugin": "../index.js"
         }
       }
     </script>
@@ -43,7 +43,7 @@
 
     <script type="module">
       import { snapdom } from "@zumer/snapdom"
-      import { fullPdf } from "snapdom-realpdf-plugin"
+      import { html2pdfSnap } from "snapdom-html2pdf-plugin"
 
       const PRESETS = {
         default: {
@@ -62,7 +62,7 @@
 
       snapdom.plugins([
         [
-          fullPdf,
+          html2pdfSnap,
           {
             filename: "capture.pdf",
             margin: 12,
@@ -81,9 +81,9 @@
         status.textContent = "Generating…"
         btn.disabled = true
         try {
-          const html2pdf = PRESETS[preset.value]
+          const html2pdfSnap = PRESETS[preset.value]
           const result = await snapdom(capture)
-          await result.toPdf({ element: capture, html2pdf })
+          await result.toHtml2pdfSnap({ element: capture, html2pdfSnap })
           status.textContent = "Done."
         } catch (e) {
           console.error(e)

@@ -1,5 +1,5 @@
 {
-  "name": "snapdom-realpdf-plugin",
+  "name": "snapdom-html2pdf-plugin",
   "version": "1.0.0",
   "description": "A starter template for building SnapDOM plugins",
   "type": "module",
@@ -33,5 +33,8 @@
   },
   "dependencies": {
     "html2pdf.js": "^0.14.0"
+  },
+  "devDependencies": {
+    "prettier": "3.8.2"
   }
 }
